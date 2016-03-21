@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+<bookInfo>
+    <authorInfo>
+	    <authorName>
+			<lastName>Smith</lastName>
+			<middleInitial>A.</middleInitial>
+			<firstName>Josseph</firstName>
+		</authorName>
+		<dateOfBirth>2013-04-01</dateOfBirth>
+		<higherEducation>MS</higherEducation>
+		<authorAddress>
+			<streetName>7740McCallum</streetName>
+			<aptNumber>222</aptNumber>
+			<city>Dallas</city>
+			<zipCode>75252</zipCode>
+			<country>USA</country>
+		</authorAddress>
+	</authorInfo>
+	
+	<publisherInfo>
+		<publisherName>Pearson</publisherName>
+		<publisherAddress>
+			<streetName>2cindrella</streetName>
+			<suiteNumber>12</suiteNumber>
+			<city>Boston</city>
+			<zipCode>34778</zipCode>
+			<country>USA</country>
+		
+		</publisherAddress>
+	
+	</publisherInfo>
+		
+		<title>The Legend</title>
+		<ISBN>AAI-1E2-33RT</ISBN>
+		<price currency="dollars">25.50</price>
+		<publicationDate>2013-03-12</publicationDate>
+		<totalCirculationTime>5Years 5Months 12Days</totalCirculationTime>
+			
+    </bookInfo >
+    
+    <bookInfo>
+    
+    
+    <authorInfo>
+	    <authorName>
+			<lastName>Khera</lastName>
+			<middleInitial>A.</middleInitial>
+			<firstName>Shiv</firstName>
+		</authorName>
+		<dateOfBirth>1960-03-12</dateOfBirth>
+		<higherEducation>MBA</higherEducation>
+		<authorAddress>
+			<streetName>123SV</streetName>
+			<aptNumber>216</aptNumber>
+			<city>Delhi</city>
+			<zipCode>11115</zipCode>
+			<country>INDIA</country>
+		</authorAddress>
+	</authorInfo>
+	
+	<publisherInfo>
+		<publisherName>Bloomsbury Academic</publisherName>
+		<publisherAddress>
+			<streetName>2347east</streetName>
+			<suiteNumber>12</suiteNumber>
+			<city>Delhi</city>
+			<zipCode>21001</zipCode>
+			<country>INDIA</country>
+		
+		</publisherAddress>
+	
+	</publisherInfo>
+    
+    
+		<title>You Can Win</title>
+		<ISBN>AAI-1E2-65HU</ISBN>
+		<price currency="rupees">20</price>
+		<publicationDate>2012-12-08</publicationDate>
+		<totalCirculationTime>2Years 5Months 2Days</totalCirculationTime>
+		
+		
+    </bookInfo>
+    <bookInfo>
+     <authorInfo>
+	    <authorName>
+			<lastName>James</lastName>
+			<middleInitial>R.</middleInitial>
+			<firstName>Lebron</firstName>
+		</authorName>
+		<dateOfBirth>1969-03-12</dateOfBirth>
+		<higherEducation>MBA</higherEducation>
+		<authorAddress>
+			<streetName>123GreenWay</streetName>
+			<aptNumber>415</aptNumber>
+			<city>Arlington</city>
+			<zipCode>12345</zipCode>
+			<country>USA</country>
+		</authorAddress>
+	</authorInfo>
+	
+	<publisherInfo>
+		<publisherName>Penguin Press HC</publisherName>
+		<publisherAddress>
+			<streetName>23WaterPArkway</streetName>
+			<suiteNumber>1</suiteNumber>
+			<city>Houston</city>
+			<zipCode>12845</zipCode>
+			<country>USA</country>
+		
+		</publisherAddress>
+	
+	</publisherInfo>
+    
+    
+		<title>Shooting Star</title>
+		<ISBN>159-420-232X</ISBN>
+		<price currency="dollars">12</price>
+		<publicationDate>20009-09-08</publicationDate>
+		<totalCirculationTime>5Years 4Months 11Days</totalCirculationTime>
+		
+		
+    </bookInfo>
+    <bookInfo>
+    <authorInfo >
+	    <authorName>
+			<lastName>Morrison</lastName>
+			<middleInitial>X.</middleInitial>
+			<firstName>Arthur</firstName>
+		</authorName>
+		<dateOfBirth>1950-03-12</dateOfBirth>
+		<higherEducation>MS</higherEducation>
+		<authorAddress>
+			<streetName>123ELRoad</streetName>
+			<aptNumber>500</aptNumber>
+			<city>Austin</city>
+			<zipCode>95118</zipCode>
+			<country>USA</country>
+		</authorAddress>
+	</authorInfo>
+	
+	<publisherInfo>
+		<publisherName>Robert</publisherName>
+		<publisherAddress>
+			<streetName>89ElCaminoReal</streetName>
+			<suiteNumber>22</suiteNumber>
+			<city>Dallas</city>
+			<zipCode>95050</zipCode>
+			<country>USA</country>
+		
+		</publisherAddress>
+	
+	</publisherInfo>
+		<title>A Poor Stick</title>
+		<ISBN>122-111-XYZZ</ISBN>
+		<price currency="euros">10</price>
+		<publicationDate>2007-05-23</publicationDate>
+		<totalCirculationTime>7Years 4Months 10Days</totalCirculationTime>
+				
+    </bookInfo>
+    <bookInfo>
+    
+    <authorInfo>
+	    <authorName>
+			<lastName>Morrison</lastName>
+			<middleInitial>X.</middleInitial>
+			<firstName>Arthur</firstName>
+		</authorName>
+		<dateOfBirth>1950-03-12</dateOfBirth>
+		<higherEducation>MS</higherEducation>
+		<authorAddress>
+			<streetName>123ELRoad</streetName>
+			<aptNumber>657</aptNumber>
+			<city>Austin</city>
+			<zipCode>95118</zipCode>
+			<country>USA</country>
+		</authorAddress>
+	</authorInfo>
+	
+	<publisherInfo>
+		<publisherName>Robert</publisherName>
+		<publisherAddress>
+			<streetName>89ElRoad</streetName>
+			<suiteNumber>23</suiteNumber>
+			<city>Dallas</city>
+			<zipCode>95050</zipCode>
+			<country>USA</country>
+		
+		</publisherAddress>
+	
+	</publisherInfo>
+		<title>My Nepenthe</title>
+		<ISBN>074-077-9141</ISBN>
+		<price currency="dollars">25</price>
+		<publicationDate>2000-06-09</publicationDate>
+		<totalCirculationTime>14Years 3Months 2Days</totalCirculationTime>
+		
+		
+    </bookInfo>
+</bookstore>
+	
+	
+
+
+
+
+
+
+
+
+

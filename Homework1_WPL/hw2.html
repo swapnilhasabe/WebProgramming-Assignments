@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+   	<!--Link to CSS sheet-->
+	<link rel="stylesheet" type="text/css" href="firststyle.css">
+	<title>Swapnil Hasabe:Homepage</title>
+	<!--keywords for finding this page in search engines-->
+	<meta name="viewport" content="width=1070"/>
+	<meta name="Description" content="I am studying master of Science at University of Texas at Dallas. I am 
+pursuing"Information Track"in CS field."/>
+	<meta name="keywords" content="Swapnil, Hasabe, home, Page
+	homepage, student, texas, utd, MS/">
+	<meta name="author" content="Swapnil Hasabe">
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "I GOT " + sessionStorage.clickcount + " Like(s) in this session.";
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>   
+
+<body>
+ <nav>
+      <a href="http://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a> |
+      <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS</a> 
+</nav>
+    <h1>Swapnil Hasabe</h2>
+    <hr></hr>			 
+<table style="width=100%">
+	<tr>
+	       <td>  
+                  <figure>			
+                    <img src="swapnil2.jpg" alt="Me" width="240" height="200">	
+                    <figcaption>I m in America</figcaption>
+                  </figure>		
+                </td>
+	        <td width="80pt"></td>
+		<td>
+		    <a href="http://cs.utdallas.edu/" target="_blank">Department of Computer Science</a>
+		    <address>
+		        Developed by Swapnil Hasabe</br>
+		        Visit at:</br>
+		        hasabe.swapnil@gmail.com</br>	
+		        7777, Mccallum Blvd, #103</br>
+		        Dallas, TX-75252</br>
+		        USA
+		    </address>
+	       </td>
+	       <td width="80pt"</td> 
+	       <td>
+                    <p style="color:blue">My Social Life(Image Mapping)</p>     
+		    <img src="connect.jpg" alt="Connect_Me" usemap="#socialmap" width="400" height="100">
+	    <map name="socialmap">                                   
+	            <area shape="rect" coords="0,0,140,140" alt="Twitter" target="_blank"                     href="https://twitter.com/SwapnilHasabe">
+                    <area shape="rect" coords="141,0,280,280" alt="Skype" target="_blank"                     href="https://secure.skype.com/portal/overview">
+	            <area shape="rect" coords="281,0,400,400" alt="Facebook" target="_blank"                     href="https://www.facebook.com/swapnil.hasabe.3">
+            </map>	
+		</td>
+	</tr>
+
+</table>
+    <hr></hr>
+    <section>
+	<h2><i>About Me</i></h2>
+        <b>I am studying master of Science in computer science at University of Texas at Dallas.
+        I am pursuing<q>Information Track</q>in CS field. My currently focus is on web technologies.</b>
+    </section>
+    <article>
+        <h3>Current Work</h3>
+        In this semester, I am going to do web development project which includes web technologies  
+        like HTML5, CSS, JavaScript, jQuery, JSON, PHP, Ajax, Java. Having found interest in web 
+        domain, I am actively seeking an internship in web development or software development
+        so that I would get opportunity to apply my skills in real world business.
+    </article>       
+	<hr></hr>
+<table>    
+    <tr>
+	    <td>
+	    <div id="div1">
+	    <h4>Education(Unordered List)</h4>
+	    <ul>
+            <li>Master of Science in Computer Science,<i><b>University of Texas at Dallas</b></i> (Dallas, USA)</li>
+            <li>Bachelor of Engineering in Computer Engineering,<i><b>Sinhgad College of Engineering</b></i>(Pune,India</li>
+            <li>Higher Secondary Certificate,<i><b>Yashvantrao Chavan Institute of Science</b></i> (Satara, India)</li> 	
+            <li>Secondary School Certificate,<i><b>Saraswati bhuvan Prashala</b></i> (Aurangabad, India)</li>
+        </ul>
+        </div>
+<table id="T1" style="width:90%">
+    <tr>
+        <th class="h">Number</th>
+        <th class="h">School/University Name</th> 
+        <th class="h">Degree</th>
+        <th class="h">passed Year</th>  
+    </tr>
+    <tr>
+        <td class="d">1</td>
+        <td class="d">University of Texas at Dallas</td> 
+        <td class="d">Master of Science</td>
+        <td class="d">2014 To Present</td>
+    </tr>
+    <tr>
+        <td class="d">2</td>
+        <td class="d">Sinhgad College of Engineering</td> 
+        <td class="d">Bachelor of Engineering</td>
+        <td class="d">2013</td>  
+    </tr>
+    <tr>
+        <td class="d">3</td>
+        <td class="d">Yashvantrao Chavan Institute of Science</td> 
+        <td class="d">HSC</td>
+        <td class="d">2007</td>
+    </tr>
+    <tr>
+        <td class="d">4</td>
+        <td class="d">Saraswati Bhuwan Prashala, Aurangabad</td> 
+        <td class="d">SSC</td>
+        <td class="d">2005</td>
+    </tr>
+</table>
+        </td>
+	<td width="100pt"></td>
+        <td>
+	        <p class="para2">Do you Like My Website? Please "Like" The page</p>
+                <p class="para2" >See How many "LIKES" I got in IN THIS SESSION ONLY</p>
+                <p><button onclick="clickCounter()" type="button">Like!</button></p>
+		<div id="result"></div>
+        
+	</td>
+    </tr>
+</table>
+<!--Another Table-->  
+<table>
+    <tr>	
+        <td>
+        <h5>Courses(ordered list)</h5>
+	    <ol class="new" type="A">
+            <li class="sem">Spring 2015
+		<ol type="I">
+                <li>Web Programming Languages</li>
+		<li>Information Security</li>	
+                <li>Design and Analysis Algorithms</li>  
+		</ol>              
+	    </li>        
+            <li class="sem">Fall 2014
+		 <ol type="I">
+                <li>Introduction to Cryptography</li>
+		<li>Telecommunication Network Management</li>	
+                <li>Object-Oriented Analysis and Design</li>  
+		</ol>              
+	    </li>  
+	    </ol>
+        </td>
+        <td width="400pt"></td>
+        <td>
+        <p id="para1">FILL Feedback FORM</p>
+    <form id="form1"> 
+        First name:</br>
+        <input type="text" name="firstname" required placeholder="first name">
+        </br>
+        Last name:</br>
+        <input type="text" name="lastname" required placeholder="last name">
+        </br>
+        <p>Gender</p>
+        <input type="radio" name="sex" value="male" >Male
+        </br>
+        <input type="radio" name="sex" value="female">Female
+        </br>
+        <input type="radio" name="sex" value="DoNot want to disclose" checked>Do Not Want to Disclose
+        </br>
+        Which Web technologies do you know:
+        </br>
+        <input type="checkbox" name="technology" value="HTML">HTML5
+        </br>
+        <input type="checkbox" name="technology" value="CSS">CSS 
+        </br>
+        <input type="checkbox" name="technology" value="PHP">PHP
+        </br>
+        <input type="checkbox" name="technology" value="JavaScipt">JavaScript
+        </br>
+        <input type="checkbox" name="technology" value="XML">XML
+        </br>
+        <input type="checkbox" name="technology" value="jQuery">jQuery
+        </br>
+        Birthday:
+        <input type="date" name="bday">
+        </br>
+        Rate My Website:
+        <input type="range" name="points" min="0" max="10" value="3">
+        </br>
+        Select a time:
+        <input type="time" name="user_time">
+        </br>
+        E-mail:
+        <input type="email" name="email" required placeholder="hasabe.swapnil@gmail.com">
+        </br>
+        Telephone:
+        <input type="tel" name="user_phone">
+        </br>
+        <button type = "reset" value = "reset">Reset</button>
+        <button type = "submit" value = "submit">SUBMIT</button>
+    </form>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <h6>Academic Projects(definition list)</h6>
+            <dl>
+                <dt class="new">Diverse Firewall Policies with Change-Impact Analysis</dt>
+                    <dd>-To find out functional discrepencies between two firewall policies and resolve them.</dd>	
+                <dt class="new">Fault Reporting System</dt>
+                    <dd>-draw UML diagrams showing<q>Fault Reporting System</q></dd>	
+            </dl>
+        </td>
+        <td width="150pt"></td>
+        <td>
+            <p id="dragdrop">Does T-Shirt fit in square? Try Drag and Drop:</p>
+			<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <br>
+            <img id="drag1" src="drag.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td width="350pt"></td>
+        <td>
+            <p id="demo">Do you Wanna See where you are?(Geolocation API)</p>
+			<button onclick="getLocation()">Found You</button>
+			<div id="mapholder"></div>
+<script>
+    var x = document.getElementById("demo");
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+    function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+    function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+        </td>
+	</tr>
+</table>
+
+<footer class="para2">
+    <p>Website Developed by Swapnil Hasabe</p>
+</footer>
+
+</body>
+</html>

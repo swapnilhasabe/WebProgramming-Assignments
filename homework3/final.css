@@ -1,0 +1,46 @@
+
+			
+/*ID Based style selectors*/
+
+#bodyPage {
+	background-color: #F6CEF5;
+}
+#tabular, th, td {
+	border: 2px solid black;
+
+}
+
+table#tabular th {
+background-color:#0099CC;
+
+}
+h4 {
+	background-color: blue;
+        color:orange;
+ }
+
+
+
+
+/*Class Based style selectors*/
+
+.mainFiles {
+	background-color:rgb(0,0,255);
+        color: orange;
+        text-align: center;
+	}
+
+.alignment{
+text-align:center;
+}
+.XpathTable {
+	border: 2px solid black;
+	width: 30%;
+}
+table.XpathTable th	{
+    background-color: blue;
+    color: orange;
+}
+td {
+			padding : 12px;
+		}

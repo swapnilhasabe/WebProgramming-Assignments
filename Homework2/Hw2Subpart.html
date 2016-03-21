@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HWSubpart</title>
+<link rel="stylesheet" type="text/css" href="thirdStyle.css">
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#ip2").keydown(function(){
+        $("#p1").animate({fontSize: "3em"}).animate({letterSpacing: "+=10px"}).animate({bottom: "-=25px"}).animate({bottom: "+=100px"});
+    });
+    $("#ip2").keyup(function(){
+        $("#p1").stop(true,true);
+    });
+$("#ip3").blur(function(){
+        alert("Text::" + $("#p7").text() +"\n"+"HTML: "+ $("#p7").html()+"\n"+"Attribute::" +$("#p7").attr("id"));
+    });	
+$("#ip4").focus(function(){
+   $("#p8").text("Text has been set by focus ")+"\n"+"HTML: " + $("#p8").html("<b>Text has been set by focus</b>")+"\n"+"Attribute::" +$("#ip4").val("value has been changed");
+    });
+	
+	$("#ip5").change(function(){
+        alert($("#ip5").val()+"\n"+$("#ip5").attr("id"));
+    });
+
+			
+			var altPressed = false;
+			$("#addRemoveContentTable").on("mouseover", "tr", 
+				function(event){
+					if(event.altKey) {
+						altPressed = true;
+						$(this).css("background", "white");
+					}
+				}
+			);
+			$("#addRemoveContentTable").on("mouseleave", "tr", 
+				function(event) {
+					$(this).css("background", "#6495ed");
+				}
+			);
+			$("#addRow").click(function(){
+				$("#addRemoveContentTable").append("<tr><td><div contenteditable = 'true'></div></td><td><input class = 'dltButton' type = 'button' value = 'Delete'></input></td></tr>");
+			});
+			$("#addRemoveContentTable").on("click", ".dltButton", 
+				function() {
+					$(this).parent().parent().remove();
+				}
+			);
+	
+	
+	
+	
+	
+});	
+</script>
+</head>
+
+<body>
+<P style="background-color:#6495ed;font-size:150%">Homework 2-JQuery/JScript</p>
+<p class="event">Event#6 #7</p>
+Enter your name: <input id="ip2" type="text"></input>
+<p id="p1" style="position:absolute">(Keyup and KeyDown) Chaining of Animation </p>
+<hr></hr></br></br>
+<p class="event">Event #8</p>
+Blur: <input id="ip3" type="text" value="Loosing Focus"></input>
+<p id="p7">How to use <b>blur</b> </p>
+<p class="event">Event#10</p>
+Focus: <input id="ip4" type="text" value="change the value"></input></br>
+<p id="p8">How to set Text? </p>
+<p class="event">Event#09</p>
+Change:<input id="ip5" type="text"></input>
+<p style="background-color:#6495ed;font-size:150%">Adding/Removing content from HTML pages</p></br>
+<table id = "addRemoveContentTable">
+		<tr>
+			<th>Row No.</th>
+			<th>Column</th>
+		</tr>
+		<tr>
+			<td>
+				<div contenteditable = "true" style = "{background-color:yellow}">1</div>
+			</td>
+			<td>
+				<input class = "dltButton" type = "button" value = "Delete"></input>
+			</td>
+		</tr>
+	</table>
+    <button id = "addRow">Add Row</button>
+<p style="background-color:#6495ed;font-size:150%">Shopping Cart</p></br>
+<a href="shoppingCart.html" target="_blank">Shopping Cart</a>
+</body>
+</html>

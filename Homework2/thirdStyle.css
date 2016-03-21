@@ -1,0 +1,14 @@
+body {
+background-image:url("b1.jpg");
+background-repeat:repeat-x,y;
+}
+.event{color:red;}
+
+#addRemoveContentTable{
+
+background-color:#6495ed;
+border:5px solid #aaaaaa;
+width:100%;
+
+}
+th,td{border: 1px solid black;}

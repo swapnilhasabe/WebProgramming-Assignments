@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	
+
+	<xs:complexType name="authorAddressType">
+		<xs:sequence>
+			<xs:element name="streetName" type="streetNameType"/>
+			<xs:element name="aptNumber" type="apt_type" minOccurs="0"/>
+			<xs:element name="city" type="authorNameType"/>
+			<xs:element name="zipCode" type="zipCodeType"/>
+			<xs:element name="country" type="countryType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="publisherAddressType">
+		<xs:sequence>
+			<xs:element name="streetName" type="streetNameType"/>
+			<xs:element name="suiteNumber" type="xs:short"/>
+			<xs:element name="city" type="authorNameType"/>
+			<xs:element name="zipCode" type="zipCodeType"/>
+			<xs:element name="country" type="countryType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:attribute name="currency" type="xs:string"/>
+	
+	<xs:complexType name="publisher_type" mixed="true">
+		<xs:sequence>
+			<xs:element name="publisherName" type="title_type"/>
+			<xs:element name="publisherAddress" type="publisherAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="countryType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]+"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="zipCodeType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="11111"/>
+	    	       <xs:maxInclusive value="99999"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="apt_type">
+		<xs:restriction base="xs:integer">
+			<xs:minExclusive value="100"/>
+	    	<xs:maxInclusive value="2000"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="streetNameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]+[a-zA-Z]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	
+
+	<xs:simpleType name="educationType">
+		<xs:restriction base="xs:string">
+		    <xs:enumeration value="BA"/>
+		    <xs:enumeration value="BS"/>
+		    <xs:enumeration value="MS"/>
+			<xs:enumeration value="MBA"/>
+			<xs:enumeration value="PHD"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="middleType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]\."/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="authorNameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z][a-zA-Z]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="dateType">
+		<xs:restriction base="xs:date">
+			<xs:minInclusive value="1900-01-01"/>
+			<xs:maxInclusive value="2015-12-31"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="authorType" mixed="true">
+		<xs:sequence>
+			<xs:element name="lastName" type="authorNameType"/>
+			<xs:element name="middleInitial" type="middleType" minOccurs="0"/>
+			<xs:element name="firstName" type="authorNameType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="authorDataType" mixed="true">
+		<xs:sequence>
+			<xs:element name="authorName" type="authorType"/>
+			<xs:element name="dateOfBirth" type="dateType"/>
+			<xs:element name="higherEducation" type="educationType"/>
+			<xs:element name="authorAddress" type="authorAddressType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="authors_type">
+		<xs:sequence>
+			<xs:element name="authorInfo" type="authorDataType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="ElapsedTimeType">
+		<xs:restriction base="xs:string">
+	       <xs:pattern value="[0-9]+Years [0-9][01]*Months ([1][0-9]*|[2][0-9]*|[3][01]*)Days"/>
+		</xs:restriction>	
+	</xs:simpleType>
+
+	<xs:complexType name="price_type">
+	    <xs:simpleContent>
+	        <xs:extension base="xs:decimal">
+	            <xs:attribute name="currency">
+	                <xs:simpleType>
+	                    <xs:restriction base="xs:string"/>
+	                </xs:simpleType>
+	            </xs:attribute>
+	        </xs:extension>
+	    </xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="isbn_type">
+	  <xs:restriction base="xs:string">
+	       <xs:pattern value="[0-9a-zA-Z]{3}[-][0-9a-zA-Z]{3}[-][0-9a-zA-Z]{4}"/>
+	  </xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="title_type">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([ ]*[A-Z]([a-zA-Z])*)+"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="bookDataType">
+			<xs:sequence>
+				<xs:element name="authorInfo"  type="authorDataType"/>
+				<xs:element name="publisherInfo" type="publisher_type"/>
+				<xs:element name="title" type="title_type"/>
+				<xs:element name="ISBN" type="isbn_type"/>
+				<xs:element name="price" type="price_type"/>
+				<xs:element name="publicationDate" type="xs:date"/>
+				<xs:element name="totalCirculationTime" type="ElapsedTimeType"/>
+			</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="bookstoreType">
+		<xs:sequence>
+			<xs:element name="bookInfo" type="bookDataType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="bookstore" type="bookstoreType"/>
+</xs:schema>
